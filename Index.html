@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday!</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe0ec, #e6d9ff);
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.85);
+    padding: 40px 25px;
+    border-radius: 25px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 10px 35px #b58ab855;
+}
+
+h1 {
+    color: #d85b91;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.cake {
+    font-size: 85px;
+    margin: 20px;
+    animation: bounce 2s infinite;
+}
+
+p {
+    color: #75536b;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+button {
+    margin-top: 25px;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #e875a7;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c94d83;
+}
+
+#surprise {
+    display: none;
+    margin-top: 25px;
+    color: #c94d83;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.balloon {
+    position: absolute;
+    font-size: 35px;
+    animation: float 5s infinite ease-in-out;
+}
+
+.b1 { top: 10%; left: 8%; }
+.b2 { top: 15%; right: 8%; }
+.b3 { bottom: 10%; left: 10%; }
+.b4 { bottom: 12%; right: 10%; }
+
+@keyframes bounce {
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes float {
+    50% { transform: translateY(-25px); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="balloon b1">🎈</div>
+<div class="balloon b2">🎀</div>
+<div class="balloon b3">🎈</div>
+<div class="balloon b4">✨</div>
+
+<div class="card">
+    <h1>Happy Birthday! 🎂</h1>
+
+    <div class="cake">🎂</div>
+
+    <p>
+        Today is all about you! 💗
+        May your day be filled with happiness,
+        laughter, beautiful memories and
+        everything your heart wishes for.
+    </p>
+
+    <button onclick="showSurprise()">
+        Open Your Surprise 💌
+    </button>
+
+    <div id="surprise">
+        You deserve all the happiness in the world!
+        Stay blessed, keep smiling and have
+        the most beautiful year ahead. 💕
+        <br><br>
+        With lots of love! 🌷
+    </div>
+</div>
+
+<script>
+function showSurprise() {
+    document.getElementById("surprise").style.display = "block";
+}
+</script>
+
+</body>
+</html>
